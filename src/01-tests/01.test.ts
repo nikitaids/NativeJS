@@ -1,12 +1,13 @@
-import {sum} from './01';
+import {towerBuilder} from './01';
 
-test('sum slould be correct',()=>{
+test('function towerBuilder is correct' , ()=>{
 
-    const a = 1
-    const b = 2
-    const c = 3
+    const res1 = towerBuilder(1)
+    const res2 = towerBuilder(2)
+    const res3 = towerBuilder(3)
 
-    const res = sum(a,b)
+    expect(res1).toStrictEqual(["*"])
+    expect(res2).toStrictEqual([" * ","***"])
+    expect(res3).toStrictEqual(["  *  "," *** ","*****"])
 
-    expect(res).toBe(3)
 })
